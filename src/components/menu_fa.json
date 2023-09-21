@@ -1,0 +1,21 @@
+{
+    "menuItems":[
+        {"name":"","description":"","price":"","category":"","image_src":""},
+        {"name":"","description":"","price":"","category":"","image_src":""},
+        {"name":"","description":"","price":"","category":"","image_src":""},
+        {"name":"","description":"","price":"","category":"","image_src":""},
+        {"name":"","description":"","price":"","category":"","image_src":""},
+        {"name":"","description":"","price":"","category":"","image_src":""},
+        {"name":"","description":"","price":"","category":"","image_src":""},
+        {"name":"","description":"","price":"","category":"","image_src":""},
+        {"name":"","description":"","price":"","category":"","image_src":""}
+    ],
+    "menuCategory":[
+        {"name":"1"},
+        {"name":"2"},
+        {"name":"3"},
+        {"name":"4"}
+    ],
+    "allTranslation":"همه",
+    "ourmenu":"منوی ما"
+}

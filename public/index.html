@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/owl-carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="css/nice-select.min.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Persianissiamo</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <div id="offcanvas" class="offcanvas offcanvas-bottom bg-black text-white" style="height:70px !important;--bs-bg-opacity:.85;background-color: grey;position: absolute;top: 0;width: 100%;padding: 10px;" tabindex="-1" id="offcanvas" data-bs-scroll="true" data-bs-backdrop="false" aria-labelledby="offcanvasLabel">
+      <div class="offcanvas-body d-flex flex-column flex-sm-row align-items-center justify-content-around gap-3">
+         <div class="small">We only use essentials cookies for our authenticated users.<button type="button" onclick="javascript:document.getElementById('offcanvas').style.display='none'" class="btn btn-sm btn-primary me-1" data-bs-dismiss="offcanvas" aria-label="Close">OK</button></div>
+      </div>
+   </div>
+
+   <button onclick="topFunction()" id="go_top_btn" title="Go to top">&uarr;</button>
+
+   <script>
+    // Get the button:
+let mybutton = document.getElementById("go_top_btn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+   </script>
+
+    <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="js/popper.min.js" >
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="js/owl-carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="js/isotope-pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="js/jquery-nic-select.min"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  </body>
+</html>
