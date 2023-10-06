@@ -1,30 +1,17 @@
 
 import logo_image from '../statics/images/logo.png';
 import { useState } from 'react';
-import menu_en from './menu_en.json';
-import menu_it from './menu_it.json';
-import menu_ar from './menu_ar.json';
+import menu_en from './menu_en.json'
+import { Link } from 'react-router-dom';
 
-const MenuContainer = () => {
-    const [currentMenu,setCurrentMenu] = useState(menu_en);
-    const [menuItems, setMenuItems] = useState(currentMenu.menuItems);
-    const [menuCategory, setMenuCategory] = useState(currentMenu.menuCategory);
-    const [ourMenu, setOurMenu] = useState(currentMenu.ourmenu);
-    const [activeMenu, setActiveMenu] = useState('');
+const MenuContainerEnglish = () => {
+    const [menuItems, setMenuItems] = useState(menu_en.menuItems.filter(item => item.category === menu_en.menuCategory[0].name));
+    const [menuCategory, setMenuCategory] = useState(menu_en.menuCategory[0].name);
 
     const itemFilter = (category) => {
-        setMenuItems(currentMenu.menuItems.filter(item => item.category === category));
-        setActiveMenu(category);
-        setMenuCategory(menuCategory);
+        setMenuItems(menu_en.menuItems.filter(item => item.category === category));
+        setMenuCategory(category);
     }
-
-    const langSwitcher = (menu_json) => {
-        setCurrentMenu(menu_json);
-        setMenuItems(menu_json.menuItems);
-        setMenuCategory(menu_json.menuCategory);
-        setOurMenu(menu_json.ourmenu);
-    }
-
 
     const slugifier = (name) => {
         return name.replaceAll(' ', '_');
@@ -33,20 +20,20 @@ const MenuContainer = () => {
     return (
         <section className='food_section layout_padding'>
             <ul className='langl' style={{ marginTop: "-30px", marginBottom: "60px" }}>
-                <li onClick={()=>langSwitcher(menu_en)} className='lang-links'>English</li>
-                <li onClick={()=>langSwitcher(menu_it)} className='lang-links'>Italiano</li>
-                <li onClick={()=>langSwitcher(menu_ar)} className='lang-links'>العربیه</li>
+                <li className='lang-links active'><Link to={'/en'}>English</Link></li>
+                <li className='lang-links'><Link to={'/it'}>Italiano</Link></li>
+                <li className='lang-links'><Link to={'/ar'}>العربیه</Link></li>
             </ul>
 
             <div className="container">
 
                 <div className="heading_container heading_center">
-                    <h2>{ourMenu}</h2>
+                    <h2>{menu_en.ourmenu}</h2>
                 </div>
 
                 <ul className="filters_menu">
-                    {menuCategory.map((category) => (
-                        <li className={activeMenu === category.name ? 'active' : 'not-active'} key={category.id} onClick={() => itemFilter(category.name)}>{category.name}</li>
+                    {menu_en.menuCategory.map((category) => (
+                        <li className={menuCategory === category.name ? 'active' : 'not-active'} key={category.id} onClick={() => itemFilter(category.name)}>{category.name}</li>
                     ))}
                 </ul>
 
@@ -83,4 +70,4 @@ const MenuContainer = () => {
     );
 }
 
-export default MenuContainer;
+export default MenuContainerEnglish;
