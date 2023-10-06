@@ -5,8 +5,8 @@ import menu_it from './menu_it.json'
 import { Link } from 'react-router-dom';
 
 const MenuContainerEnglish = () => {
-    const [menuItems, setMenuItems] = useState(menu_it.menuItems);
-    const [menuCategory, setMenuCategory] = useState('');
+    const [menuItems, setMenuItems] = useState(menu_it.menuItems.filter(item => item.category === menu_it.menuCategory[0].name));
+    const [menuCategory, setMenuCategory] = useState(menu_it.menuCategory[0].name);
 
     const itemFilter = (category) => {
         setMenuItems(menu_it.menuItems.filter(item => item.category === category));
@@ -33,7 +33,7 @@ const MenuContainerEnglish = () => {
 
                 <ul className="filters_menu">
                     {menu_it.menuCategory.map((category) => (
-                        <li className={menuCategory === category.name ? 'active' : 'not-active'} key={category.id} onClick={() => itemFilter(category.name)}>{category.name}</li>
+                        <li className={menuCategory === category.name ? 'active' : 'not-active'} key={category.id} onClick={() => {itemFilter(category.name);itemFilter(category.name);}}>{category.name}</li>
                     ))}
                 </ul>
 

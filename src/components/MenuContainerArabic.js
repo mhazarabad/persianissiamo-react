@@ -5,8 +5,8 @@ import menu_ar from './menu_ar.json'
 import { Link } from 'react-router-dom';
 
 const MenuContainerEnglish = () => {
-    const [menuItems, setMenuItems] = useState(menu_ar.menuItems);
-    const [menuCategory, setMenuCategory] = useState('');
+    const [menuItems, setMenuItems] = useState(menu_ar.menuItems.filter(item => item.category === menu_ar.menuCategory[0].name));
+    const [menuCategory, setMenuCategory] = useState(menu_ar.menuCategory[0].name);
 
     const itemFilter = (category) => {
         setMenuItems(menu_ar.menuItems.filter(item => item.category === category));
