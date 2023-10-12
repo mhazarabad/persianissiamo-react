@@ -21,7 +21,7 @@
         {"id":1119,"name":"CELO BAKHTIARI","description":"Mixed veal tenderloin marinated with Persian herbs and saffron chicken tenderloin with onion and peppers, accompanied with saffron rice and grilled tomato","price":"22","category":"CELO PERSIAN GRILLS","image_src":""},
         {"id":1120,"name":"CELO SOLTANI","description":"Marinated veal tenderloin with Persian herbs, Mixed minced lamb and veal with various flavorings accompanied with saffron rice and grilled tomato","price":"28","category":"CELO PERSIAN GRILLS","image_src":""},
         {"id":1121,"name":"CELO KUBIDEH and JUJE","description":"Saffron marinated chicken filet with onion and peppers, Mixed minced lamb and veal with various flavorings accompanied with saffron rice and grilled tomato","price":"26","category":"CELO PERSIAN GRILLS","image_src":""},
-        {"id":1122,"name":"DOUBLE CELO KUBIDEH","description":"Double Mixed minced lamb and veal with various flavorings accompanied with saffron rice and grilled tomato","price":"26","category":"CELO PERSIAN GRILLS","image_src":""},
+        {"id":2122,"name":"DOUBLE CELO KUBIDEH","description":"Double Mixed minced lamb and veal with various flavorings accompanied with saffron rice and grilled tomato","price":"26","category":"CELO PERSIAN GRILLS","image_src":""},
         {"id":1122,"name":"CELO MIX GRILLS","description":"Juje, kubideh, barg and 2 pieces of shishlig accompanied with 2 plates of saffron rice and grilled tomato","price":"52","category":"CELO PERSIAN GRILLS","image_src":""},
         {"id":1123,"name":"JUJE","description":"Saffron marinated chicken filet with onion and peppers,accompanied with grilled tomato and lavash bread","price":"13","category":"PERSIAN GRILLS","image_src":""},
         {"id":1124,"name":"KUBIDEH ","description":"Mixed minced lamb and veal meat with various flavorings, accompanied with grilled tomato and lavash bread","price":"13","category":"PERSIAN GRILLS","image_src":""},
@@ -83,7 +83,7 @@
     "menuCategory":[
         {"id":111,"name":"STARTERS"},
         {"id":112,"name":"CELO KHOROSHT"},
-        {"id":113,"name":"CONTORNI"},
+        {"id":113,"name":"SIDES"},
         {"id":114,"name":"CELO PERSIAN GRILLS"},
         {"id":115,"name":"PERSIAN GRILLS"},
         {"id":116,"name":"PERSIAN PLATES"},
